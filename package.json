@@ -1,6 +1,6 @@
 {
   "name": "express-favicon-short-circuit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "express-favicon-short-circuit is an Express middleware that eliminates those annoying favicon requests",
   "main": "index.js",
   "scripts": {
