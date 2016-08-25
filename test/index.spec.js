@@ -27,8 +27,8 @@ describe('given the \'express-favicon-short-circuit\' middleware', () => {
       sinon.assert.calledWithExactly(res.type, 'image/x-icon')
     })
 
-    it('then res.status called with exactly 200', () => {
-      sinon.assert.calledWithExactly(res.status, 200)
+    it('then res.status called with exactly 301', () => {
+      sinon.assert.calledWithExactly(res.status, 301)
     })
 
     it('then res.end called', () => {
