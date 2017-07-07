@@ -1,74 +1,69 @@
-/* global describe, before, it */
-/* eslint import/no-extraneous-dependencies: "off" */
-
-const chai = require('chai')
-const sinon = require('sinon')
-const middleware = require('../index')
-
-chai.should()
+const middleware = require('../index');
 
 describe('given the \'express-favicon-short-circuit\' middleware', () => {
   describe('when req.url === \'/favicon.ico\'', () => {
-    const req = {}
-    const res = {}
-    const next = sinon.stub()
-    before(() => {
-      // request
-      req.url = '/favicon.ico'
-      // response
-      res.type = sinon.stub()
-      res.status = sinon.stub()
-      res.end = sinon.stub()
+    const req = {};
+    const res = {};
+    const next = jest.fn();
 
-      middleware(req, res, next)
-    })
+    beforeAll(() => {
+      // request
+      req.url = '/favicon.ico';
+      // response
+      res.type = jest.fn();
+      res.status = jest.fn();
+      res.end = jest.fn();
+
+      middleware(req, res, next);
+    });
 
     it('then res.type called with exactly \'image/x-icon\'', () => {
-      sinon.assert.calledWithExactly(res.type, 'image/x-icon')
-    })
+      expect(res.type).toHaveBeenCalledWith('image/x-icon');
+    });
 
     it('then res.status called with exactly 301', () => {
-      sinon.assert.calledWithExactly(res.status, 301)
-    })
+      expect(res.status).toHaveBeenCalledWith(301);
+    });
 
     it('then res.end called', () => {
-      sinon.assert.called(res.end)
-    })
+      expect(res.end).toHaveBeenCalled();
+    });
 
     it('then next not called', () => {
-      sinon.assert.notCalled(next)
-    })
-  })
+      expect(next).not.toHaveBeenCalled();
+    });
+  });
 
   describe('when req.url !== \'/favicon.ico\'', () => {
-    const req = {}
-    const res = {}
-    const next = sinon.stub()
-    before(() => {
-      // request
-      req.url = '/index.html'
-      // response
-      res.type = sinon.stub()
-      res.status = sinon.stub()
-      res.end = sinon.stub()
+    const req = {};
+    const res = {};
+    const next = jest.fn();
 
-      middleware(req, res, next)
-    })
+    beforeAll(() => {
+      // request
+      req.url = '/index.html';
+      // response
+      res.type = jest.fn();
+      res.status = jest.fn();
+      res.end = jest.fn();
+
+      middleware(req, res, next);
+    });
 
     it('then res.type not called', () => {
-      sinon.assert.notCalled(res.type)
-    })
+      expect(res.type).not.toHaveBeenCalled();
+    });
 
     it('then res.status not called', () => {
-      sinon.assert.notCalled(res.status)
-    })
+      expect(res.status).not.toHaveBeenCalled();
+    });
 
     it('then res.end not called', () => {
-      sinon.assert.notCalled(res.end)
-    })
+      expect(res.end).not.toHaveBeenCalled();
+    });
 
     it('then next called', () => {
-      sinon.assert.called(next)
-    })
-  })
-})
+      expect(next).toHaveBeenCalled();
+    });
+  });
+});

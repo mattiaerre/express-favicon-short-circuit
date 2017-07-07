@@ -1,6 +1,6 @@
 # express-favicon-short-circuit
 
-**express-favicon-short-circuit** is an Express middleware that eliminates those annoying **favicon** requests
+**express-favicon-short-circuit** is an Express middleware that eliminates those annoying **favicon** requests.
 
 ## Usage
 
@@ -10,18 +10,18 @@ Npm install using the following command:
 npm i -S express-favicon-short-circuit
 ```
 
-And use it inside your **Express** app:
+And use it in your **Express** app:
 
 ```javascript
-const express = require('express')
+const express = require('express');
 
 // omissis
 
-const app = express()
+const app = express();
 
 // omissis
 
-app.use(require('express-favicon-short-circuit'))
+app.use(require('express-favicon-short-circuit'));
 ```
 
 ## Example

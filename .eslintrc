@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "jsx-a11y/href-no-hash": "off",
+    "import/no-extraneous-dependencies": "off",
+    "comma-dangle": "off"
+  },
+  "env": {
+    "jest": true
+  }
+}

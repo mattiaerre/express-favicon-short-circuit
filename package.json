@@ -1,12 +1,11 @@
 {
   "name": "express-favicon-short-circuit",
-  "version": "1.1.0",
-  "description": "express-favicon-short-circuit is an Express middleware that eliminates those annoying favicon requests",
+  "version": "1.1.1",
+  "description": "express-favicon-short-circuit is an Express middleware that eliminates those annoying favicon requests.",
   "main": "index.js",
   "scripts": {
-    "coverage": "istanbul cover _mocha test/index.spec.js",
-    "example": "DEBUG=express-favicon-short-circuit PORT=3001 nodemon example.js",
-    "test": "mocha"
+    "example": "DEBUG=express-favicon-short-circuit:* PORT=3000 nodemon example.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,20 +15,21 @@
     "name": "Mattia Richetto",
     "email": "mattia.richetto@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mattiaerre/express-favicon-short-circuit/issues"
   },
   "homepage": "https://github.com/mattiaerre/express-favicon-short-circuit#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
     "debug": "^2.2.0",
-    "eslint": "^3.3.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
     "express": "^4.14.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.0.2",
-    "nodemon": "^1.10.2",
-    "sinon": "^1.17.5"
+    "jest": "^20.0.4",
+    "nodemon": "^1.10.2"
   },
   "keywords": [
     "express",
