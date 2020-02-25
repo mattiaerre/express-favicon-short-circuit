@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const debug = require('debug')('express-favicon-short-circuit:example');
 

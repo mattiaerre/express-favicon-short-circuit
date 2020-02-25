@@ -1,8 +1,6 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "rules": {
-    "jsx-a11y/href-no-hash": "off",
-    "import/no-extraneous-dependencies": "off",
     "comma-dangle": "off"
   },
   "env": {

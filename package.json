@@ -1,10 +1,12 @@
 {
   "name": "express-favicon-short-circuit",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "express-favicon-short-circuit is an Express middleware that eliminates those annoying favicon requests.",
   "main": "index.js",
   "scripts": {
     "example": "DEBUG=express-favicon-short-circuit:* PORT=3000 nodemon example.js",
+    "prettier": "prettier '__tests__/**/*.{js,json,md}'",
+    "prettier:fix": "npm run prettier -- --write",
     "test": "jest"
   },
   "repository": {
@@ -21,15 +23,14 @@
   },
   "homepage": "https://github.com/mattiaerre/express-favicon-short-circuit#readme",
   "devDependencies": {
-    "debug": "^2.2.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.2",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.1.0",
-    "express": "^4.14.0",
-    "jest": "^20.0.4",
-    "nodemon": "^1.10.2"
+    "debug": "^4.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   },
   "keywords": [
     "express",

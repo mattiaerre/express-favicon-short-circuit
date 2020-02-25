@@ -1,7 +1,7 @@
 const middleware = require('../index');
 
-describe('given the \'express-favicon-short-circuit\' middleware', () => {
-  describe('when req.url === \'/favicon.ico\'', () => {
+describe("given the 'express-favicon-short-circuit' middleware", () => {
+  describe("when req.url === '/favicon.ico'", () => {
     const req = {};
     const res = {};
     const next = jest.fn();
@@ -17,7 +17,7 @@ describe('given the \'express-favicon-short-circuit\' middleware', () => {
       middleware(req, res, next);
     });
 
-    it('then res.type called with exactly \'image/x-icon\'', () => {
+    it("then res.type called with exactly 'image/x-icon'", () => {
       expect(res.type).toHaveBeenCalledWith('image/x-icon');
     });
 
@@ -34,7 +34,7 @@ describe('given the \'express-favicon-short-circuit\' middleware', () => {
     });
   });
 
-  describe('when req.url !== \'/favicon.ico\'', () => {
+  describe("when req.url !== '/favicon.ico'", () => {
     const req = {};
     const res = {};
     const next = jest.fn();
